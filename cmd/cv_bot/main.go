@@ -1,7 +1,7 @@
 package main
 
 import (
-	telegram "cv_kimimo_bot/internal"
+	telegram "github.com/impopov/aws-recognition-telegram-bot/internal"
 	"log"
 )
 

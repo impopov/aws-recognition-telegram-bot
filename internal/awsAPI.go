@@ -2,7 +2,6 @@ package iternal
 
 import (
 	"context"
-	"cv_kimimo_bot/internal/helpers"
 	"fmt"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
@@ -10,6 +9,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/rekognition"
 	"github.com/aws/aws-sdk-go-v2/service/rekognition/types"
 	"github.com/fogleman/gg"
+	"github.com/impopov/aws-recognition-telegram-bot/internal/helpers"
 	"image"
 	"log"
 	"os"

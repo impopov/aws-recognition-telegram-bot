@@ -57,7 +57,7 @@ func (b *Bot) getKeyboardRow(btnName, btnCode string) []tgbotapi.InlineKeyboardB
 }
 
 func (b *Bot) askToPrintIntro() {
-	msg := tgbotapi.NewMessage(b.BotChatID, "Прочитать туториал?")
+	msg := tgbotapi.NewMessage(b.BotChatID, "Read tutorial?")
 
 	btn := b.getKeyboardRow("Read tutorial", "read_tutorial")
 	btn2 := b.getKeyboardRow("Skip tutorial", "skip_tutorial")
@@ -74,7 +74,6 @@ func (b *Bot) showMenu(update *tgbotapi.Update) {
 		b.getKeyboardRow("Text recognition", "text_recognition"),
 		b.getKeyboardRow("Nudity recognition", "nudity_recognition"),
 		b.getKeyboardRow("Personal Projective Equipment", "personal_projective_equipment"),
-		b.getKeyboardRow("Crack detection", "crack_detection"),
 	)
 	b.TgBot.Send(msg)
 }
@@ -102,10 +101,6 @@ func (b *Bot) updateProcessing(update *tgbotapi.Update) {
 		b.TgBot.Send(msg)
 	case "personal_projective_equipment":
 		b.UserState = "personal_projective_equipment"
-		msg := tgbotapi.NewMessage(b.BotChatID, "Send image to recognize")
-		b.TgBot.Send(msg)
-	case "crack_detection":
-		b.UserState = "crack_detection"
 		msg := tgbotapi.NewMessage(b.BotChatID, "Send image to recognize")
 		b.TgBot.Send(msg)
 	}
@@ -220,8 +215,6 @@ func TgHandler(bot *Bot) {
 				}
 
 				bot.showMenu(&update)
-			case "crack_detection":
-
 			}
 
 		}
