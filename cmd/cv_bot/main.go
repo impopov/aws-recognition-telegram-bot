@@ -9,7 +9,7 @@ func main() {
 	//init bot
 	bot := telegram.NewTgBot()
 
-	log.Printf("Authorized on account %s", bot.TgBot.Self.UserName)
+	log.Printf("Authorized on account %s", bot.Self.UserName)
 
-	telegram.TgHandler(bot)
+	telegram.TgHandler()
 }
