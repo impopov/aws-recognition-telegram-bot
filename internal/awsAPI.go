@@ -3,6 +3,10 @@ package iternal
 import (
 	"context"
 	"fmt"
+	"image"
+	"log"
+	"os"
+
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/credentials"
@@ -10,9 +14,6 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/rekognition/types"
 	"github.com/fogleman/gg"
 	"github.com/impopov/aws-recognition-telegram-bot/internal/helpers"
-	"image"
-	"log"
-	"os"
 )
 
 func createAWSConfig() (*aws.Config, error) {

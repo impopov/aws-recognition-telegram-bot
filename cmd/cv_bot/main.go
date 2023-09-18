@@ -1,8 +1,9 @@
 package main
 
 import (
-	telegram "github.com/impopov/aws-recognition-telegram-bot/internal"
 	"log"
+
+	telegram "github.com/impopov/aws-recognition-telegram-bot/internal"
 )
 
 func main() {
